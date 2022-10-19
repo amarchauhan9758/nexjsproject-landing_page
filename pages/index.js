@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { BsArrowRight, BsArrowLeft, BsTwitter, BsInstagram } from 'react-icons/bs'
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
-import { AiFillInstagram } from 'react-icons/ai'
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image"
 import logo from '../assets/Images/logo.png'
 import { Pivot as Hamburger } from 'hamburger-react'
+
 
 export default function Home() {
   const [isOpen, setOpen] = useState(false)
@@ -24,6 +25,24 @@ export default function Home() {
     }
   }
 
+
+  let slideIndex = 1;
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+  }
+
+  // Next/previous controls
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
 
   return (
     <div className="relative" style={{ overflowX: "clip" }}>
@@ -52,7 +71,7 @@ export default function Home() {
       {/* carousel for laptop  */}
 
       <div className='laptopCarousel'>
-        <Carousel showIndicators={true}  autoPlay={true} showArrows={false}   infiniteLoop={true}   >
+        <Carousel showIndicators={true} autoPlay={true} showArrows={false} infiniteLoop={true}   >
           <div className="heroImg relative">
 
           </div>
@@ -143,69 +162,50 @@ export default function Home() {
         </div>
 
         {/* right div */}
-        <div className='rightDiv  flex flex-col screenDiv   xl:p-4  items-start '>
+        <div className='rightDiv  w-[90%]  flex flex-col screenDiv    xl:p-4  items-start '>
 
-          <Carousel className="Sliding" width={1000} showArrows={false} showIndicators={false} infiniteLoop={true}  >
-            <div className='flex justify-center items-center gap-8'>
-              <p className="one "></p>
+          <Carousel width={1200} infiniteLoop={true}  showArrows={false}   sshowIndicators={false}  >
+
+            <div className='flex justify-start slideshow-container items-center gap-8'>
+
+              <p className="one  mySlides"></p>
               <p className="two "></p>
-              <p className="three "></p>
-              <p className="four  "></p>
+              <p className="three"></p>
+              <p className="twelve  "></p>
+
+
 
             </div>
-            <div className='flex justify-center items-center gap-8'>
-              <p className="five "></p>
-              <p className="seven "></p>
-              <p className="eight"></p>
-              <p className="seven"></p>
-
+            <div className='flex justify-start slideshow-container items-center gap-8'>
+            <p className="five mySlides"></p>
+            <p className="six"></p>
+            <p className="seven"></p>
+            <p className="eight"></p>
+           
             </div>
-            <div className='flex justify-center items-center gap-8'>
-              <p className="twelve "></p>
-              <p className="nine "></p>
-              <p className="elevan"></p>
-              <p className="ten "></p>
-
+            <div className='flex justify-start slideshow-container items-center gap-8'>
+            <p className="nine mySlides"></p>
+            <p className="ten"></p>
+            <p className="elevan"></p>
+            <p className="four"></p>
+           
+           
             </div>
-
-
-          </Carousel>
-
-          <Carousel className="newSliding" width={1000} showIndicators={false} infiniteLoop={true} autoPlay={true} showArrows={false}  >
-            <div className='flex justify-center items-center gap-8'>
-              <p className="one "></p>
-              <p className="two "></p>
-              <p className="three "></p>
-              <p className="four  "></p>
-
-            </div>
-            <div className='flex justify-center items-center gap-8'>
-              <p className="five "></p>
-              <p className="six "></p>
-              <p className="seven"></p>
-              <p className="eight "></p>
-
-            </div>
-            <div className='flex justify-center items-center gap-8'>
-              <p className="nine "></p>
-              <p className="ten "></p>
-              <p className="elevan"></p>
-              <p className="twelve"></p>
-
-            </div>
+            
+            
 
 
           </Carousel>
 
 
 
-          <div className='flex text-2xl text-gray-700 space-x-3  sm:ml-20  '>
-            <p className=' p-2'>
-              <BsArrowLeft />
-            </p>
-            <p className='p-2 arrowCard'>
-              <BsArrowRight />
-            </p>
+          <div className='flex justify-center  items-center text-2xl text-gray-700 space-x-3  ml-20 lg:ml-12 '>
+            <div>
+              <button className="hover:border hover:scale-110 hover:duration-300 hover:ease-in-out px-2 py-1 text-semibold " onClick={()=>plusSlides(-1)} ><BsArrowLeft /></button>
+            </div>
+            <div>
+              <button  className='hover:border   hover:scale-110 hover:duration-300 hover:ease-in-out text-semibold px-2 py-1' onClick={() =>plusSlides(1)} > <BsArrowRight />  </button>
+            </div>
 
           </div>
 
@@ -225,23 +225,33 @@ export default function Home() {
 
 
       {/* Footer */}
-
+      <div className="mx-10  h-2 w-auto font-bold ">
+      <hr/>
+      </div>
       <div className='mt-16 lg:px-32 md:px-8 '>
-        <p className='w-full h-0.5 bg-gray-300'></p>
+      
         <div className='pt-1 pb-4 mt-2 md:mt-0 px-8 md:px-0 md:flex justify-between items-center'>
           <p className='text-[#787878]  font-Montserrat tracking-[10%] '>	&#169;groundzero | All rights reserved</p>
-          <div className='flex space-x-8 text-xl text-gray-700 mt-2'>
+          <div className='flex mt-[5rem] space-x-8 text-xl text-gray-700 lg:mt-2'>
             <p className='p-2 rounded-full bg-gray-300'>
+            <a href="https://www.facebook.com/" >
               <FaFacebookF />
+             </a>
             </p>
             <p className='p-2 rounded-full bg-gray-300'>
+            <a href="https://www.instagram.com/">
               <BsInstagram />
+              </a>
             </p>
             <p className='p-2 rounded-full bg-gray-300'>
+            <a href="https://twitter.com/">
               <BsTwitter />
+              </a>
             </p>
             <p className='p-2 rounded-full bg-gray-300'>
+               <a href="https://www.linkedin.com/">
               <FaLinkedinIn />
+               </a>
             </p>
           </div>
         </div>
