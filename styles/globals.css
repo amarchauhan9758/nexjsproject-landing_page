@@ -26,7 +26,124 @@
     url(../assets/Fonts/futura/Futura\ Bold\ font.ttf) format("woff");
 }
 
+/* carsoul............................................................................................................................................... */
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.mySlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.hideContainer {
+  animation: hide-in 1.5s ease-out 0s forwards;
+}
+
+.showContainer {
+  animation: show-in 1.5s ease-out 0s forwards;
+}
+
+.slideshow-container1 {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  transform: translateX(-100vw);
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
 
   
@@ -157,7 +274,7 @@ img {
 }
 
 
-.fadeInAnimation{
+.fadeInAnimation {
   animation: fade-in 1s ease-out 0s forwards;
   /* animation: fade-in  1s ease-in forwards infinite; */
 }
@@ -168,29 +285,19 @@ img {
  
 
 .circle {
-  height: 30vh;
-  width: 16vw;
   background-image: url("../assets/Images/Ellipse3.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 80% 20%;
 }
 .vertical-line {
-  width: 2vw;
-  height: 30vh;
   background-image: url("../assets/Images/Rectangle1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .horizontal-line {
-  width:4rem ;
-  height:20%;
   background-image: url("../assets/Images/Rectangle2.png");
   background-repeat: no-repeat;
-
 }
-
-
-
 
 .mySlides {
   display: flex;
@@ -202,7 +309,7 @@ img {
   width: 151px;
   height: 12px;
   margin-top: 12px;
-  font-family: 'josefin';
+  font-family: "josefin";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -213,13 +320,11 @@ img {
   color: #787878;
 }
 
-
-
 .GetinTouch {
   width: 284px;
   height: 40px;
 
-  font-family: 'futura';
+  font-family: futura;
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -230,7 +335,6 @@ img {
 
   color: #000000;
 
-
   /* Inside auto layout */
 
   flex: none;
@@ -238,15 +342,12 @@ img {
   flex-grow: 0;
 }
 
-
-
 .mobile {
-
   width: 61px;
   height: 16px;
   margin-top: 32px;
   margin-bottom: 12px;
-  font-family: 'josefin';
+  font-family: "josefin";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -257,21 +358,18 @@ img {
 
   color: #000000;
 
-
   /* Inside auto layout */
 
   flex: none;
   order: 0;
   flex-grow: 0;
-
 }
 
 .email {
-
   width: 50px;
   height: 16px;
   margin-top: 32px;
-  font-family: 'josefin';
+  font-family: "josefin";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -282,34 +380,18 @@ img {
 
   color: #000000;
 
-
   /* Inside auto layout */
 
   flex: none;
   order: 0;
   flex-grow: 0;
-
 }
-
-
-
-
-
 
 .carousel .control-dots .dot.selected,
 .carousel .control-dots .dot:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-
-
-
-.BlankDiv{
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-}
-
 
 .heroImg {
   width: 100vw;
@@ -415,9 +497,9 @@ img {
 .one {
   height: 30vh;
   width: 16vw;
+  background-size: 100% 100%;
   background-image: url("../assets/Images/Apartment\ 1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 
 .two {
@@ -541,8 +623,6 @@ img {
 }
 
 @media (max-width: 768px) and (min-width: 600px) {
-
-
   .circle {
     position: absolute;
     bottom: 0;
@@ -555,9 +635,8 @@ img {
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
-  
+
   .vertical-line {
-    
     position: absolute;
     width: 2vw;
     height: 50vh;
@@ -575,37 +654,19 @@ img {
     background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
     background-repeat: no-repeat;
     right: -2px;
-
-  
   }
-
-
-
-
-
-
-
-
-
-
-
-
 
   .headerNew {
     padding-left: 5px;
     height: 12vh;
     z-index: 40;
-
-
-
   }
-
 
   .GetinTouch {
     width: 284px;
     height: 40px;
 
-    font-family: 'futura';
+    font-family: "futura";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -616,7 +677,6 @@ img {
 
     color: #000000;
 
-
     /* Inside auto layout */
 
     flex: none;
@@ -624,15 +684,11 @@ img {
     flex-grow: 0;
   }
 
-
-
-
-
   .emailaddress {
     width: 151px;
     height: 12px;
     margin-top: 12px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -643,22 +699,18 @@ img {
     color: #787878;
   }
 
-
-
   .mySlides {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-
   .mobile {
-
     width: 61px;
     height: 16px;
     margin-top: 32px;
     margin-bottom: 12px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -669,21 +721,18 @@ img {
 
     color: #000000;
 
-
     /* Inside auto layout */
 
     flex: none;
     order: 0;
     flex-grow: 0;
-
   }
 
   .email {
-
     width: 50px;
     height: 16px;
     margin-top: 32px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -694,33 +743,18 @@ img {
 
     color: #000000;
 
-
     /* Inside auto layout */
 
     flex: none;
     order: 0;
     flex-grow: 0;
-
   }
-
-
-
-
-
-
-
-    
-
-
-
 
   .LogoIMg {
     padding-top: 1.8rem;
   }
 
-
   .mobDropDown {
-    display: block;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -734,7 +768,7 @@ img {
 
   .laptopCarousel {
     display: none;
-    z-index: index;
+    /* z-index: index; */
   }
 
   .mobCarousel {
@@ -769,7 +803,6 @@ img {
 
   .card {
     width: 40vw;
-
   }
 
   .Sliding {
@@ -838,10 +871,6 @@ img {
 }
 
 @media (max-width: 600px) {
-
-
-
-
   .circle {
     position: absolute;
     bottom: 0;
@@ -853,7 +882,7 @@ img {
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
-  
+
   .vertical-line {
     position: absolute;
     width: 3vw;
@@ -872,9 +901,7 @@ img {
     background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
     background-repeat: no-repeat;
     right: -26px;
-  
   }
-  
 
   .carousel .control-dots {
     position: absolute;
@@ -884,10 +911,7 @@ img {
     text-align: center;
     width: 101%;
     z-index: 3;
-
   }
-
-
 
   .carousel .control-dots .dot {
     border: 5px solid orange;
@@ -895,8 +919,8 @@ img {
     font-size: xx-large;
     width: 32px;
     height: 32px;
-    transition: opacity .25s ease-in;
-    opacity: .3;
+    transition: opacity 0.25s ease-in;
+    opacity: 0.3;
     filter: alpha(opacity=30);
     background-color: #f0b342;
 
@@ -905,22 +929,13 @@ img {
     cursor: pointer;
     display: inline-block;
     margin: 32px 14px;
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-offset-color);
+    box-shadow: var(--tw-ring-inset) 0 0 0
+      calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-offset-color);
   }
-
-
-
-
-
-
 
   .header {
     display: none;
   }
-
-
-
-
 
   .LogoIMg {
     padding-top: 1.8rem;
@@ -1090,61 +1105,23 @@ img {
   .newSliding {
     display: none;
   }
-
 }
-
-@keyframes Slide {
-
-  0% {
-    transform: translateY(-40vh);
-  }
-
-  100% {
-    transform: translateY(68vh);
-  }
-}
-
-@keyframes mobSilde {
-  0% {
-    transform: translateY(-40vh);
-  }
-
-  100% {
-    transform: translateY(50vh);
-  }
-}
-
-
-@keyframes fade-in {
-
-  0%{transform: translateX( 100%)}
-  60%{transform: translateX( 60%)}
-  100%{transform: translateX( 0)}
-
-  
- 
-}
-
 
 @media (min-width: 1024px) {
+  .circle {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    top: -230px;
+    height: 49vh;
+    width: 33vw;
+    background-image: url(/_next/static/media/Ellipse3.b015319f.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 
-
-
-.circle {
-  position: absolute;
-  bottom: 0;
-  right: 0px;
-  top: -230px;
-  height: 49vh;
-  width: 33vw;
-  background-image: url(/_next/static/media/Ellipse3.b015319f.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.vertical-line {
-  
-  position: absolute;
+  .vertical-line {
+    position: absolute;
     width: 2vw;
     height: 49vh;
     background-image: url(/_next/static/media/Rectangle2.96ea3249.png);
@@ -1152,19 +1129,16 @@ img {
     background-size: 100% 100%;
     right: 107px;
     top: -231px;
-}
-.horizontal-line {
-  position: absolute;
-  bottom: 85px;
-  width: 30.4vw;
-  height: 4vh;
-  background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
-  background-repeat: no-repeat;
-  right: 5px;
-
-}
-
-
+  }
+  .horizontal-line {
+    position: absolute;
+    bottom: 85px;
+    width: 30.4vw;
+    height: 4vh;
+    background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
+    background-repeat: no-repeat;
+    right: 5px;
+  }
 
   .mySlides {
     display: flex;
@@ -1173,10 +1147,9 @@ img {
   }
 
   .herotextTabP2 {
-
     height: 24px;
 
-    font-family: '';
+    font-family: "";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1185,24 +1158,20 @@ img {
 
     letter-spacing: 0.05em;
 
-    color: #FFFFFF;
-
+    color: #ffffff;
   }
 
   .herotextTabP1 {
-
     height: 64px;
     margin-bottom: 5rem;
-    font-family: 'futura';
+    font-family: "futura";
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     /* identical to box height */
 
-
-    color: #FFFFFF;
-
+    color: #ffffff;
 
     /* Inside auto layout */
 
@@ -1210,84 +1179,72 @@ img {
     order: 0;
     flex-grow: 0;
   }
-
-
-
-
-  .emailaddress {
-    width: 151px;
-    height: 12px;
-     margin-top: 12px;
-    font-family: 'josefin';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 100%;
-    /* identical to box height, or 12px */
-
-    letter-spacing: 0.1em;
-    color: #787878;
-  }
-
-
-  .mobile {
-
-    width: 61px;
-    height: 16px;
-    margin-top: 32px;
-    margin-bottom: 12px;
-    font-family: 'josefin';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    /* identical to box height, or 16px */
-
-    letter-spacing: 0.1em;
-
-    color: #000000;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-  }
-
-  .email {
-
-    width: 50px;
-    height: 16px;
-    margin-top: 32px;
-    font-family: 'josefin';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    /* identical to box height, or 16px */
-
-    letter-spacing: 0.1em;
-
-    color: #000000;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-  }
-
-
 
   .emailaddress {
     width: 151px;
     height: 12px;
     margin-top: 12px;
-    font-family: 'josefin';
+    font-family: "josefin";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    /* identical to box height, or 12px */
+
+    letter-spacing: 0.1em;
+    color: #787878;
+  }
+
+  .mobile {
+    width: 61px;
+    height: 16px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-family: "josefin";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.1em;
+
+    color: #000000;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .email {
+    width: 50px;
+    height: 16px;
+    margin-top: 32px;
+    font-family: "josefin";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: 0.1em;
+
+    color: #000000;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .emailaddress {
+    width: 151px;
+    height: 12px;
+    margin-top: 12px;
+    font-family: "josefin";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -1298,7 +1255,6 @@ img {
 
     color: #787878;
   }
-
 
   .carousel .control-dots {
     position: absolute;
@@ -1311,16 +1267,14 @@ img {
     left: -19rem;
   }
 
-
-
   .carousel .control-dots .dot {
     border: 12px solid orange;
     color: #f0b342;
     font-size: xx-large;
     width: 32px;
     height: 32px;
-    transition: opacity .25s ease-in;
-    opacity: .3;
+    transition: opacity 0.25s ease-in;
+    opacity: 0.3;
     filter: alpha(opacity=30);
     background-color: #f0b342;
 
@@ -1329,7 +1283,8 @@ img {
     cursor: pointer;
     display: inline-block;
     margin: 32px 14px;
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-offset-color);
+    box-shadow: var(--tw-ring-inset) 0 0 0
+      calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-offset-color);
   }
 
   .carousel .control-dots .dot.selected,
@@ -1350,7 +1305,6 @@ img {
     padding-right: 15px;
   }
 
-
   .LogoIMg {
     width: 10vw;
   }
@@ -1358,14 +1312,7 @@ img {
   .card {
     margin-left: 12.5rem;
   }
-
-
-  .rightDiv{
-    transform: -translateY(7rem);
-  }
-
 }
-
 
 
 
@@ -1421,10 +1368,10 @@ img {
     background-image: url(/_next/static/media/Ellipse3.b015319f.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+  }
 
-.vertical-line {
-  position: absolute;
+  .vertical-line {
+    position: absolute;
     width: 1vw;
     height: 45vh;
     background-image: url(/_next/static/media/Rectangle2.96ea3249.png);
@@ -1432,21 +1379,16 @@ img {
     background-size: 100% 100%;
     right: 107px;
     top: -219px;
-}
-.horizontal-line {
-  position: absolute;
+  }
+  .horizontal-line {
+    position: absolute;
     bottom: 40px;
     width: 24.5vw;
     height: 2vh;
     background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
     background-repeat: no-repeat;
     right: 0px;
-  
-    ;
-
-}
-
-
+  }
 
   .mySlides {
     display: flex;
@@ -1454,13 +1396,10 @@ img {
     align-items: center;
   }
 
-
-
   .herotextTabP2 {
-
     height: 24px;
 
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1469,25 +1408,20 @@ img {
 
     letter-spacing: 0.05em;
 
-    color: #FFFFFF;
-
+    color: #ffffff;
   }
 
-
   .herotextTabP1 {
-
     height: 64px;
     margin-bottom: 2rem;
-    font-family: 'futura';
+    font-family: "futura";
     font-style: normal;
     font-weight: 700;
     font-size: 64px;
     line-height: 64px;
     /* identical to box height */
 
-
-    color: #FFFFFF;
-
+    color: #ffffff;
 
     /* Inside auto layout */
 
@@ -1496,13 +1430,11 @@ img {
     flex-grow: 0;
   }
 
-
-
   .emailaddress {
     width: 151px;
     height: 12px;
     margin-top: 12px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -1513,14 +1445,12 @@ img {
     color: #787878;
   }
 
-
   .mobile {
-
     width: 61px;
     height: 16px;
     margin-top: 32px;
     margin-bottom: 12px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -1531,21 +1461,18 @@ img {
 
     color: #000000;
 
-
     /* Inside auto layout */
 
     flex: none;
     order: 0;
     flex-grow: 0;
-
   }
 
   .email {
-
     width: 50px;
     height: 16px;
     margin-top: 32px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -1556,22 +1483,18 @@ img {
 
     color: #000000;
 
-
     /* Inside auto layout */
 
     flex: none;
     order: 0;
     flex-grow: 0;
-
   }
-
-
 
   .emailaddress {
     width: 151px;
     height: 12px;
     margin-top: 12px;
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -1587,7 +1510,7 @@ img {
     width: 151px;
     height: 12px;
 
-    font-family: 'josefin';
+    font-family: "josefin";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -1599,12 +1522,11 @@ img {
     color: #787878;
   }
 
-
   .GetinTouch {
     width: 284px;
     height: 40px;
 
-    font-family: 'futura';
+    font-family: "futura";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -1614,7 +1536,6 @@ img {
     letter-spacing: 0.1em;
 
     color: #000000;
-
 
     /* Inside auto layout */
 
@@ -1631,10 +1552,7 @@ img {
     text-align: center;
     width: 101%;
     z-index: 3;
-
   }
-
-
 
   .carousel .control-dots .dot {
     border: 12px solid orange;
@@ -1642,8 +1560,8 @@ img {
     font-size: xx-large;
     width: 32px;
     height: 32px;
-    transition: opacity .25s ease-in;
-    opacity: .3;
+    transition: opacity 0.25s ease-in;
+    opacity: 0.3;
     filter: alpha(opacity=30);
     background-color: #f0b342;
 
@@ -1652,21 +1570,15 @@ img {
     cursor: pointer;
     display: inline-block;
     margin: 32px 14px;
-    box-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-offset-color);
+    box-shadow: var(--tw-ring-inset) 0 0 0
+      calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-offset-color);
   }
-
-
-
 
   .carousel .control-dots .dot.selected,
   .carousel .control-dots .dot:hover {
     opacity: 2;
     filter: alpha(opacity=100);
   }
-
-
-
-
 
   .headerNew {
     gap: 26rem;
@@ -1680,37 +1592,83 @@ img {
     padding-right: 10px;
   }
 
-
   .LogoIMg {
-    width: 12vw
+    width: 12vw;
   }
 
   .card {
     margin-left: 12.5rem;
   }
 
+@keyframes Slide {
+  0% {
+    transform: translateY(-40vh);
+  }
 
+@keyframes Slide {
+  0% {
+    transform: translateY(-40vh);
+  }
 
 
 }
 
+  100% {
+    transform: translateY(50vh);
+  }
+}
 
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
-/* carsoul............................................................................................................................................... */
+@keyframes fade-in {
+  0% {
+    transform: translateX(100%);
+  }
+  60% {
+    transform: translateX(60%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hide-in {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* On smaller screens, decrease text size
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+} */
