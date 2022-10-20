@@ -8,8 +8,10 @@ import Image from "next/image"
 import logo from '../assets/Images/logo.png'
 import { Pivot as Hamburger } from 'hamburger-react'
 import ReactPlayer from 'react-player';
-
 import loder from '../assets/Images/git.gif'
+import circle from "../assets/Images/Ellipse3.png"
+import verticle from "../assets/Images/Rectangle1.png"
+import horizontal from "../assets/Images/Rectangle2.png"
 
 
 
@@ -19,30 +21,21 @@ export default function Home() {
   const [isPlaying, setIsPlaying] = useState(true);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   const modalHandler = () => {
     setOpen(!isOpen)
   }
-  if (typeof window !== "undefined") {
-    if (isOpen) {
-      const element = window.document.getElementById('slidingDiv');
-      element.classList.add('mobDropDown')
-    } else {
-      // const element = window.document.getElementById('slidingDiv');
-      // element.classList.remove('mobDropDown')
-    }
-  }
+  // if (typeof window !== "undefined" && isOpen) {
+  //   const element = window.document.getElementById('slidingDiv');
+  //   element.classList.add('mobDropDown')
+  // } else if (typeof window !== "undefined" && !isOpen) {
+  //   const element = window.document.getElementById('slidingDiv');
+  //   if (element.classList.contains('mobDropDown')) {
+  //     element.classList.remove('mobDropDown')
+  //   }else{
+  //     return
+  //   }
+  // }
+
 
 
   let slideIndex = 1;
@@ -60,14 +53,14 @@ export default function Home() {
 
   // Next/previous controls
   function plusSlides(n) {
-    
-    
-    
+
+
+
     if (typeof window !== "undefined") {
       showSlides(slideIndex += n);
       const element = document.getElementById('slide')
-      element.classList.add("fadeInAnimation") 
-      
+      element.classList.add("fadeInAnimation")
+
     }
 
   }
@@ -81,15 +74,17 @@ export default function Home() {
 
   return (
     <div>
-    {
+      {
 
-    
-          loader? <div className= "flex justify-center items-center scale-150  mt-24">
-            <Image src={ loder } alt="laoser" />
-             
-              </div>
-        
-         : <div className="relative" style={{ overflowX: "clip" }}>
+
+        loader ? <div style={{ height: '100vh', width: '100vw' }} className="flex justify-center items-center ">
+          <div>
+            <Image src={loder} alt="laoser" />
+          </div>
+
+        </div>
+
+          : <div className="relative" style={{ overflowX: "clip" }}>
 
             {/* =================Background Img====================== */}
 
@@ -114,10 +109,10 @@ export default function Home() {
 
             {/* carousel for laptop  */}
 
-           
-             
+
+
             <div className='laptopCarousel  relative '>
-            
+
               <Carousel showIndicators={true} autoPlay={true} showArrows={false} infiniteLoop={true}   >
                 <div className="heroImg relative">
 
@@ -131,11 +126,11 @@ export default function Home() {
                 <div className="heroImgFour relative">
 
                 </div>
-                
+
               </Carousel>
-            
-                 
-              </div>
+
+
+            </div>
 
             {/* ==================head=============================== */}
 
@@ -165,7 +160,7 @@ export default function Home() {
             </div>
 
             {/* sliding header hamburger icon */}
-            <div id="slidingDiv" className=' absolute -top-96 bg-white  w-full  px-8 space-y-4 py-4'>
+            <div id="slidingDiv" className={isOpen ? `mobDropDown absolute -top-96 bg-white  w-full  px-8 space-y-4 py-4` : ' absolute -top-96 bg-white  w-full  px-8 space-y-4 py-4'}>
               <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >HOME</p>
               <p className=' h-[10px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>ABOUT US</p>
               <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>LOOK BOOK</p>
@@ -174,14 +169,14 @@ export default function Home() {
               <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>PROCESS</p>
             </div>
 
-           
+
             <div className='absolute herotextTab top-52 lg:top-72  px-36 text-white font-josefin  w-full tracking-widest'>
               <p className=' herotextTabP1 text-2xl font-josefin '>HEADLINE TEXT</p>
               <p className='herotextTabP2 text-lg  font-josefin font-[16px] text-white  leading-6 tracking-[5%] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
               <p className="mt-4  herotextTabP2 text-lg font-josefin font-[16px] text-white  leading-6 tracking-[5%] ">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
               <p className="mt-4 herotextTabP2 text-lg    font-josefin font-[16px] text-white  leading-6 tracking-[5%]  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
               <p className="mt-4 herotextTabP2 text-lg  font-josefin font-[16px] text-white  leading-6 tracking-[5%]  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-            
+
             </div>
 
             {/* <div className="absolute px-8  md:px-36 flex dots space-x-8 items-center">
@@ -214,28 +209,28 @@ export default function Home() {
               </div>
 
               {/* right div */}
-              <div className='rightDiv flex flex-col screenDiv    items-start '>
+              <div className='rightDiv flex flex-col screenDiv z-20   items-start '>
 
                 <Carousel width={1000} infiniteLoop={true} showArrows={false} showIndicators={false}  >
 
-                  <div id="slide" className='flex justify-start slideshow-container items-center gap-8'>
+                  <div id="slide" className='flex  justify-start slideshow-container items-center gap-8'>
 
-                    <p className="one  mySlides"></p>
-                    <p className="two "></p>
-                    <p  className="three"></p>
-                    <p   className="twelve  "></p>
+                    <p className="one z-20   mySlides"></p>
+                    <p className="two z-20 "></p>
+                    <p className="three z-20 "></p>
+                    <p className="twelve z-20  "></p>
 
 
-
-                  </div>
-                  <div  className='flex justify-start slideshow-container items-center gap-8'>
-                    <p   className="five mySlides"></p>
-                    <p   className="six"></p>
-                    <p   className="seven"></p>
-                    <p   className="eight"></p>
 
                   </div>
-                 
+                  <div className='flex justify-start  z-20 slideshow-container items-center gap-8'>
+                    <p className="five mySlides z-20 "></p>
+                    <p className="six z-20 "></p>
+                    <p className="seven z-20 "></p>
+                    <p className="eight z-20 "></p>
+
+                  </div>
+
 
 
 
@@ -285,7 +280,7 @@ export default function Home() {
                       <FaFacebookF />
                     </a>
                   </p>
-                  <p className='p-2 rounded-full bg-gray-300'>
+                  <p className='p-2 rounded-full z-10 bg-gray-300'>
                     <a href="https://www.instagram.com/">
                       <BsInstagram />
                     </a>
@@ -298,17 +293,28 @@ export default function Home() {
                   <p className='p-2 rounded-full bg-gray-300'>
                     <a href="https://www.linkedin.com/">
                       <FaLinkedinIn />
-                    </a> 
+                    </a>
                   </p>
 
 
-                  <div className='parent absolute right-0 bottom: 217px; '>
+                  {/* <div className='border-4 border-red-500 absolute right-0 bottom-24'>
 
                     <p className="circle"></p>
                     <p className="vertical-line"></p>
                     <p className="horizontal-line"> </p>
 
+                  </div> */}
+
+                  <div className='absolute bottom-0 -z-10 right-0'>
+                    <Image src={circle} />
                   </div>
+                  <div className='absolute bottom-28 -z-10 right-0'>
+                    <Image src={verticle} />
+                  </div>
+                  <div className='absolute bottom-0 -z-10 right-28'>
+                    <Image src={horizontal} />
+                  </div>
+
 
                 </div>
               </div>
@@ -319,10 +325,10 @@ export default function Home() {
 
           </div>
 
-      
 
 
-    }
+
+      }
     </div>
   )
 }
