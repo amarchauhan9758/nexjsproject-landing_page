@@ -28,6 +28,44 @@
 
 
 
+.fadeInAnimation{
+  animation: fade-in 1s ease-out 0s forwards;
+  /* animation: fade-in  1s ease-in forwards infinite; */
+}
+
+ .blankDiv{
+  background-color:black;
+  postion:absolute;
+  height:30vh;
+  top:0;
+ 
+  
+ }
+
+.circle {
+  height: 30vh;
+  width: 16vw;
+  background-image: url("../assets/Images/Ellipse3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.vertical-line {
+  width: 2vw;
+  height: 30vh;
+  background-image: url("../assets/Images/Rectangle1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.horizontal-line {
+  width:4rem ;
+  height:20%;
+  background-image: url("../assets/Images/Rectangle2.png");
+  background-repeat: no-repeat;
+
+}
+
+
+
 
 .mySlides {
   display: flex;
@@ -369,6 +407,56 @@
 }
 
 @media (max-width: 768px) and (min-width: 600px) {
+
+
+  .circle {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    top: -251px;
+
+    height: 52vh;
+    width: 43vw;
+    background-image: url(/_next/static/media/Ellipse3.b015319f.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .vertical-line {
+    
+    position: absolute;
+    width: 2vw;
+    height: 50vh;
+    background-image: url(/_next/static/media/Rectangle2.96ea3249.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 107px;
+    top: -250px;
+  }
+  .horizontal-line {
+    position: absolute;
+    bottom: 72px;
+    width: 42.4vw;
+    height: 4vh;
+    background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
+    background-repeat: no-repeat;
+    right: -2px;
+
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
   .headerNew {
     padding-left: 5px;
     height: 12vh;
@@ -512,6 +600,7 @@
 
   .laptopCarousel {
     display: none;
+    z-index: index;
   }
 
   .mobCarousel {
@@ -615,6 +704,43 @@
 }
 
 @media (max-width: 600px) {
+
+
+
+
+  .circle {
+    position: absolute;
+    bottom: 0;
+    right: -2px;
+    top: -174px;
+    height: 34vh;
+    width: 47vw;
+    background-image: url(/_next/static/media/Ellipse3.b015319f.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  
+  .vertical-line {
+    position: absolute;
+    width: 3vw;
+    height: 33vh;
+    background-image: url(/_next/static/media/Rectangle2.96ea3249.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 54px;
+    top: -175px;
+  }
+  .horizontal-line {
+    position: absolute;
+    bottom: 22px;
+    width: 53.4vw;
+    height: 4vh;
+    background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
+    background-repeat: no-repeat;
+    right: -26px;
+  
+  }
+  
 
   .carousel .control-dots {
     position: absolute;
@@ -834,6 +960,7 @@
 }
 
 @keyframes Slide {
+
   0% {
     transform: translateY(-40vh);
   }
@@ -854,8 +981,55 @@
 }
 
 
+@keyframes fade-in {
+
+  0%{transform: translateX( 100%)}
+  60%{transform: translateX( 60%)}
+  100%{transform: translateX( 0)}
+
+  
+ 
+}
+
 
 @media (min-width: 1024px) {
+
+
+
+.circle {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  top: -230px;
+  height: 49vh;
+  width: 33vw;
+  background-image: url(/_next/static/media/Ellipse3.b015319f.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.vertical-line {
+  
+  position: absolute;
+    width: 2vw;
+    height: 49vh;
+    background-image: url(/_next/static/media/Rectangle2.96ea3249.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 107px;
+    top: -231px;
+}
+.horizontal-line {
+  position: absolute;
+  bottom: 85px;
+  width: 30.4vw;
+  height: 4vh;
+  background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
+  background-repeat: no-repeat;
+  right: 5px;
+
+}
+
 
 
   .mySlides {
@@ -994,13 +1168,13 @@
 
   .carousel .control-dots {
     position: absolute;
-    top: 45rem;
+    top: 37rem;
     margin: 28px 0;
     padding: 0;
     text-align: center;
     width: 101%;
     z-index: 3;
-    left: -36rem;
+    left: -32rem;
   }
 
 
@@ -1057,6 +1231,43 @@
 
 @media (min-width: 1440px) {
 
+
+
+  
+.circle {
+  position: absolute;
+    bottom: 0;
+    right: -2px;
+    top: -219px;
+    height: 41vh;
+    width: 25vw;
+    background-image: url(/_next/static/media/Ellipse3.b015319f.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.vertical-line {
+  position: absolute;
+    width: 1vw;
+    height: 45vh;
+    background-image: url(/_next/static/media/Rectangle2.96ea3249.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 107px;
+    top: -219px;
+}
+.horizontal-line {
+  position: absolute;
+    bottom: 40px;
+    width: 24.5vw;
+    height: 2vh;
+    background-image: url(/_next/static/media/Rectangle1.c8859e7f.png);
+    background-repeat: no-repeat;
+    right: 0px;
+  
+    ;
+
+}
 
 
 
