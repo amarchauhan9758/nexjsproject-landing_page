@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { BsArrowRight, BsArrowLeft, BsTwitter, BsInstagram } from 'react-icons/bs'
-import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
+import { BsArrowRight, BsArrowLeft, BsTwitter, BsInstagram, BsYoutube } from 'react-icons/bs'
+import { FaFacebookF, FaLinkedinIn ,  } from 'react-icons/fa'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Image from "next/image"
@@ -40,6 +40,31 @@ export default function Home() {
         </div>
 
       </div>}
+
+      <div className='flex Navbar  justify-between  items-center bg-white lg:px-20   '>
+          <div className=' w-20 xl:w-[10rem]  mt-2 ml-2 lg:ml-0 md:ml-0 md:mt-0 lg:mt-0  pt-2' >
+            <Image className="logo  " src={logo} alt='image' width={100}
+              height={74} />
+           
+          </div>
+          <div className='right-side  tracking-widest  '>
+
+            <ul className='flex   items-center py-5 lg:gap-12  md:gap-5    uppercase' >
+              <li className='right-side-text   h-[16px] font-josefin font-[16px]  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>Home</li>
+              <li className=' right-side-text  h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >About us</li>
+              <li className=' right-side-text  h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>Look book</li>
+              <li className=' right-side-text  h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >Press</li>
+              <li className=' right-side-text  h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >Process</li>
+              <li className=' right-side-text  h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >contact</li>
+            </ul>
+
+          </div>
+        </div>
+
+
+
+
+
       <div className="relative" style={{ overflowX: "clip" }}>
 
         {/* =================Background Img====================== */}
@@ -90,28 +115,11 @@ export default function Home() {
 
         {/* ==================head=============================== */}
 
-        <div className='headerNew flex  items-center bg-white xl:py-8 xl:px-20  '>
-          <div className='LogoIMg w-20 xl:w-[10rem]    pt-2' >
-            <Image className="logoFirst" src={logo} alt='image' width={120}
-              height={80} />
-            {/* <p className='lg:-translate-x-4 lg:translate-y-6 logoMainText text-xs font-josefin '>GROUND ZERO</p> */}
-            <p className='lg:hidden logoMainText1'>ARCHITECTURE | INTERIOR</p>
-          </div>
-          <div className=' header w-full tracking-widest  '>
+       
 
-            <ul className='flex    py-5 gap-12   w-full uppercase' >
-              <li className='  h-[16px] font-josefin font-[16px]  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>Home</li>
-              <li className=' h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >About us</li>
-              <li className=' h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>Look book</li>
-              <li className=' h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >Press</li>
-              <li className=' h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >Process</li>
-              <li className=' h-[16px] font-josefin font-[16px] text-black font-normal leading-4  hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6' >contact</li>
-            </ul>
 
-          </div>
-        </div>
         {/* head mob and tab */}
-        <div className=' absolute headTab -top-5  z-40  right-0  font-josefin flex flex-col space-y-3 px-4 pt-8  justify-end  tracking-widest items-center  '>
+        <div className=' absolute headTab -top-24  z-40  right-0  font-josefin flex flex-col space-y-3 px-4 pt-8  justify-end  tracking-widest items-center  '>
           <Hamburger toggled={isOpen} toggle={setOpen} onClick={modalHandler} />
         </div>
 
@@ -122,7 +130,7 @@ export default function Home() {
           <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>LOOK BOOK</p>
           <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>PRESS</p>
           <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>PROCESS</p>
-          <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>PROCESS</p>
+          <p className=' h-[16px] font-josefin text-sm  font-normal leading-4 hover:text-[#F0B342] transition duration-300  hover:border-b-2 hover:border-[#F0B342] pb-6'>CONTACT</p>
         </div>
 
 
@@ -150,7 +158,7 @@ export default function Home() {
         </div>
 
 
-        <div className="md:flex md:items-center   md:justify-start lg:justify-center  lg:items-center overflow-x-visible  md:space-x-6 pb-10  z-20 lg:-translate-y-24 md:-translate-y-14 ">
+        <div className="md:flex md:items-center   md:justify-start lg:justify-center  lg:items-center overflow-x-visible  md:space-x-6 pb-10  -translate-y-8 z-20 lg:-translate-y-24 md:-translate-y-14 ">
           {/* left div */}
           <div className="lg:pl-12 md:pl-6 py-10   card bg-white ">
             <p className="GetinTouch">Get In Touch</p>
@@ -162,7 +170,7 @@ export default function Home() {
           </div>
 
           {/* right div */}
-          <div className='rightDiv flex flex-col screenDiv z-20   items-start '>
+          <div className=' flex flex-col screenDiv z-20   items-start '>
             <div style={{ width: '1000px' }} className=' overflow-x-hidden flex justify-between items-center'>
               <div  className={!count ? 'flex lg:animate-rightFadeIn md:animate-rightFadeInTab  justify-start  items-center gap-8' : `lg:animate-rightFadeOut md:animate-rightFadeOutTab flex justify-start  items-center gap-8`}>
                 <p className="one z-20   ">
@@ -179,7 +187,7 @@ export default function Home() {
                 <p className="eight z-20 "></p>
               </div>
             </div>
-            <div className='flex justify-center  items-center text-2xl text-gray-700 space-x-2  '>
+            <div className='flex justify-center  mt-5 items-center text-2xl text-gray-700 space-x-2  '>
               <div>
                 <button className="hover:border  hover:shadow-sm shadow-black hover:scale-110 hover:duration-300 hover:ease-in-out px-2 py-1 text-semibold " onClick={plusSlides} ><BsArrowLeft /></button>
               </div>
@@ -211,26 +219,29 @@ export default function Home() {
 
             <p className='text-[#787878]  font-Montserrat tracking-[10%] '>	&#169;groundzero | All rights reserved</p>
             <div className='flex mt-[5rem] space-x-8 text-xl text-gray-700 lg:mt-2'>
-              <p className='p-2 rounded-full bg-gray-300'>
+              <p className='p-2 rounded-full text-black bg-[#D9D9D9]'>
                 <a href="https://www.facebook.com/" >
                   <FaFacebookF />
                 </a>
               </p>
-              <p className='p-2 rounded-full z-10 bg-gray-300'>
+              <p className='p-2 rounded-full text-black z-10 bg-[#D9D9D9]'>
                 <a href="https://www.instagram.com/">
                   <BsInstagram />
                 </a>
               </p>
-              <p className='p-2 rounded-full bg-gray-300'>
-                <a href="https://twitter.com/">
-                  <BsTwitter />
-                </a>
-              </p>
-              <p className='p-2 rounded-full bg-gray-300'>
+
+              <p className='p-2 rounded-full text-black bg-[#D9D9D9]'>
                 <a href="https://www.linkedin.com/">
                   <FaLinkedinIn />
                 </a>
               </p>
+
+              <p className='p-2 rounded-full text-black bg-[#D9D9D9]'>
+                <a href="https://www.youtube.com/">
+                  <BsYoutube />
+                </a>
+              </p>
+             
 
 
               {/* <div className='border-4 border-red-500 absolute right-0 bottom-24'>
