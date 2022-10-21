@@ -806,10 +806,9 @@ img {
   }
 
   .LogoIMg {
-    padding-top: 1.8rem;
-    width: 15vw;
-    height: 10vh;
-    transform: translateY(-3vh);
+    /* padding-top: 1.8rem; */
+    padding-top: 1.5vh;
+    scale: 0.7;
   }
 
   .mobDropDown {
@@ -924,7 +923,7 @@ img {
   }
 
   .headerNew {
-    height: 12vh;
+    height: 8vh;
     padding-left: 5px;
   }
 

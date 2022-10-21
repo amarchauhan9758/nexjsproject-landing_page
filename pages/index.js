@@ -95,7 +95,7 @@ export default function Home() {
             <Image className="logoFirst" src={logo} alt='image' width={120}
               height={80} />
             {/* <p className='lg:-translate-x-4 lg:translate-y-6 logoMainText text-xs font-josefin '>GROUND ZERO</p> */}
-            <p className='lg:hidden logoMainText1'>ARCHITECTURE | INTERIOR</p>
+            {/* <p className='lg:hidden logoMainText1'>ARCHITECTURE | INTERIOR</p> */}
           </div>
           <div className=' header w-full tracking-widest  '>
 
