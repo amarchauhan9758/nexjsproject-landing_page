@@ -617,6 +617,9 @@ img {
 
   .LogoIMg {
     padding-top: 1.8rem;
+    width: 8vw;
+    height: 10vh;
+    transform: translateY(-3vh);
   }
 
   .mobDropDown {
@@ -804,6 +807,9 @@ img {
 
   .LogoIMg {
     padding-top: 1.8rem;
+    width: 15vw;
+    height: 10vh;
+    transform: translateY(-3vh);
   }
 
   .mobDropDown {

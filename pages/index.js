@@ -10,7 +10,7 @@ import loder from '../assets/Images/git.gif'
 import circle from "../assets/Images/Ellipse3.png"
 import verticle from "../assets/Images/Rectangle1.png"
 import horizontal from "../assets/Images/Rectangle2.png"
-import one from "../assets/Images/Apartment\ 1.jpg"
+
 
 
 
@@ -164,7 +164,7 @@ export default function Home() {
           {/* right div */}
           <div className='rightDiv flex flex-col screenDiv z-20   items-start '>
             <div style={{ width: '1000px' }} className=' overflow-x-hidden flex justify-between items-center'>
-              <div  className={!count ? 'flex lg:animate-rightFadeIn md:animate-rightFadeInTab  justify-start  items-center gap-8' : `lg:animate-rightFadeOut md:animate-rightFadeOutTab flex justify-start  items-center gap-8`}>
+              <div className={!count ? 'flex lg:animate-rightFadeIn md:animate-rightFadeInTab  justify-start  items-center gap-8' : `lg:animate-rightFadeOut md:animate-rightFadeOutTab flex justify-start  items-center gap-8`}>
                 <p className="one z-20   ">
                   {/* <Image src={one} width="100%" height="100%" layout="responsive" objectFit="contain" /> */}
                 </p>
@@ -172,7 +172,7 @@ export default function Home() {
                 <p className="three z-20 "></p>
                 <p className="twelve z-20  "></p>
               </div>
-              <div  className={count ? `flex justify-start lg:animate-leftFadeIn md:animate-leftFadeInTab  z-20   items-center gap-8 ` : ` lg:animate-leftFadeOut flex justify-start items-center md:animate-leftFadeOutTab gap-8`}>
+              <div className={count ? `flex justify-start lg:animate-leftFadeIn md:animate-leftFadeInTab  z-20   items-center gap-8 ` : ` lg:animate-leftFadeOut flex justify-start items-center md:animate-leftFadeOutTab gap-8`}>
                 <p className="five  z-20 "></p>
                 <p className="six z-20 "></p>
                 <p className="seven z-20 "></p>
